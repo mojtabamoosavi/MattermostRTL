@@ -1,0 +1,130 @@
+@font-face {
+    font-family: IRANSans;
+    font-style: normal;
+    font-weight: 400;
+    src:  url('~./fonts/eot/IRANSansWeb.eot') format('embedded-opentype'),  /* IE6-8 */
+    url('~./fonts/woff2/IRANSansWeb.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+    url('~./fonts/woff/IRANSansWeb.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('~./fonts/ttf/IRANSansWeb.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: IRANSans;
+    font-style: normal;
+    font-weight: 500;
+    src:  url('~./fonts/eot/IRANSansWeb_Medium.eot') format('embedded-opentype'),  /* IE6-8 */
+    url('~./fonts/woff2/IRANSansWeb_Medium.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+    url('~./fonts/woff/IRANSansWeb_Medium.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('~./fonts/ttf/IRANSansWeb_Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: IRANSans;
+    font-style: normal;
+    font-weight: 700;
+    src:  url('~./fonts/eot/IRANSansWeb_Bold.eot') format('embedded-opentype'),  /* IE6-8 */
+    url('~./fonts/woff2/IRANSansWeb_Bold.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+    url('~./fonts/woff/IRANSansWeb_Bold.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('~./fonts/ttf/IRANSansWeb_Bold.ttf') format('truetype');
+}
+
+body {
+    font-family: 'IRANSans' !important;
+}
+
+.sidebar--left .nav li > h4 {
+    font-weight: 500;
+}
+
+.app__body .sidebar--left .sidebar__switcher,
+.sidebar--left,
+.sidebar--left .sidebar__divider .sidebar__divider__text,
+.app__body .modal .settings-modal .settings-table .settings-links, .app__body .sidebar--menu {
+    background: #2f343d;
+}
+
+.app__body #status-dropdown .status-wrapper .status,
+.app__body #status-dropdown .status-wrapper .status-edit,
+.sidebar--left .team__header,
+.app__body .sidebar--menu .team__header,
+.app__body .post-list__timestamp > div {
+    background: #2f343d;
+}
+
+.sidebar--left .nav li.active .sidebar-item,
+.sidebar--left .nav li.active .sidebar-item:hover,
+.sidebar--left .nav li.active .sidebar-item:focus {
+    background: #414852;
+}
+
+.sidebar--left .nav-pills__container li .sidebar-item:hover,
+.sidebar--left .nav-pills__container li > .nav-more:hover,
+.app__body .modal .settings-modal .nav-pills > li:hover button {
+    background: #373c44;
+}
+
+.app__body .multi-teams .team-sidebar, .app__body #navbar .navbar-default {
+    background: #2f343d;
+}
+
+.sidebar--left .nav li.active .sidebar-item::before, .app__body .modal .settings-modal .nav-pills > li.active button::before {
+  display: none;
+}
+
+.app__body .modal .modal-header {
+    background: #2f343d;
+}
+
+.app__body .modal .settings-modal .profile-img__remove:hover,
+.app__body .DayPicker:not(.DayPicker--interactionDisabled) .DayPicker-Day:not(.DayPicker-Day--disabled):not(.DayPicker-Day--selected):not(.DayPicker-Day--outside):hover,
+.app__body .modal .settings-modal .team-img__remove:hover,
+.app__body .btn.btn-transparent:hover,
+.app__body .btn.btn-transparent:active,
+.app__body .post-image__details .post-image__download svg:hover,
+.app__body .file-view--single .file__download:hover,
+.app__body .new-messages__button div,
+.app__body .btn.btn-primary,
+.app__body .tutorial__circles .circle.active,
+.app__body .post__pinned-badge {
+    background: #56b68b;
+}
+
+.app__body .btn.btn-primary:hover,
+.app__body .btn.btn-primary:active,
+.app__body .btn.btn-primary:focus {
+    background: #008952;
+}
+
+.post-message__text {
+    line-height: 25px;
+}
+
+.sidebar--left .team__header .user__picture,
+.sidebar--menu .team__header .user__picture,
+.admin-sidebar .team__header .user__picture {
+    border-radius: 4px;
+}
+
+.post .post__img img {
+    border-radius: 4px;
+}
+
+.app__body .post.current--user .post__body,
+.app__body .post.post--comment.other--root.current--user .post-comment,
+.app__body pre,
+.app__body .post-right__container .post.post--root {
+    background: transparent;
+}
+
+.sidebar--left .add-channel-btn {
+    font-size: 1.5em;
+    font-weight: 400;
+}
+
+.app__body .modal .modal-header button.close {
+    outline: none;
+}
+
+.btn:focus {
+    outline: none !important;
+}
