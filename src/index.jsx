@@ -1,11 +1,10 @@
 import React from 'react'
-import { isRTL } from './rtl'
+import {isRTL} from './rtl'
 import './app.css';
 
 class MattermostRTLPlugin {
 
     initialize(registry, store) {
-
         setTimeout(() => {
             this.makeRTL();
         }, 3000);
@@ -14,57 +13,41 @@ class MattermostRTLPlugin {
             this.fixAllMessages();
             this.makeReplyRTL();
         }, 1000)
-
     }
 
     fixAllMessages() {
-        // Get all post message
         let postsText = document.getElementsByClassName('post-message__text');
+
         for (let postText of postsText) {
-            // Get element
             const element = postText;
-            // Get element inner text
             const text = element.innerText;
-            // Check direction
             const dir = isRTL(text) ? 'rtl' : 'ltr';
-            // Set direction
             element.setAttribute("dir", dir);
+            element.style.textAlign = isRTL(text) ? 'right' : 'left';
         }
     }
 
-    makeRTL() {
-        // Get post textarea
-        const postBox = document.getElementById('post_textbox');
-        // Textarea keyup event
-        postBox.addEventListener('keyup', function(){
-            // Get textarea value
-            let postBoxValue = postBox.value;
-            // Check direction
-            if(isRTL(postBoxValue)) {
-                postBox.setAttribute("dir", "rtl");
+    makeElementRTL(element) {
+        element && element.addEventListener('keyup', function () {
+            let value = element.value;
+            if (isRTL(value)) {
+                element.setAttribute("dir", "rtl");
+                element.style.textAlign = 'right';
             } else {
-                postBox.setAttribute("dir", "ltr");
+                element.setAttribute("dir", "ltr");
+                element.style.textAlign = 'left';
             }
         });
     }
 
+    makeRTL() {
+        const postBox = document.getElementById('post_textbox');
+        this.makeElementRTL(postBox);
+    }
+
     makeReplyRTL() {
-        // Get reply textarea
         const replyBox = document.getElementById('reply_textbox');
-        // Check if reply box exist
-        if(replyBox) {
-            // Textarea keyup event
-            replyBox.addEventListener('keyup', function(){
-                // Get textarea value
-                let replyBoxValue = replyBox.value;
-                // Check direction
-                if(isRTL(replyBoxValue)) {
-                    replyBox.setAttribute("dir", "rtl");
-                } else {
-                    replyBox.setAttribute("dir", "ltr");
-                }
-            });
-        }
+        this.makeElementRTL(replyBox);
     }
 }
 

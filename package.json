@@ -1,6 +1,6 @@
 {
-  "name": "Mattermost RTL Plugin",
-  "version": "0.0.1",
+  "name": "mattermost-rtl-plugin",
+  "version": "2.0.0",
   "description": "This plugin adds RTL support to the mattermost webapp.",
   "main": "src/index.js",
   "scripts": {
@@ -11,9 +11,12 @@
   "author": "",
   "license": "",
   "devDependencies": {
+    "@babel/core": "^7.13.15",
+    "@babel/preset-env": "^7.13.15",
+    "@babel/preset-react": "^7.13.13",
     "babel-core": "^6.26.3",
     "babel-eslint": "^8.2.6",
-    "babel-loader": "^7.1.5",
+    "babel-loader": "^8.2.2",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.7.0",
@@ -25,11 +28,11 @@
     "eslint-plugin-react": "^7.10.0",
     "style-loader": "^0.23.1",
     "url-loader": "^1.1.2",
-    "webpack": "^4.16.1",
-    "webpack-cli": "^3.0.8"
+    "webpack": "^5.33.2",
+    "webpack-cli": "^4.6.0"
   },
   "dependencies": {
-    "react": "16.4.1",
+    "react": "^16.4.1",
     "react-redux": "5.0.7",
     "redux": "4.0.0"
   }

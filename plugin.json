@@ -2,6 +2,7 @@
   "id": "com.mojtabamoosavi.mattermost-rtl",
   "name": "Mattermost RTL Plugin",
   "description": "This plugin adds RTL support to the mattermost webapp",
+  "version": "2.0.0",
   "webapp": {
     "bundle_path": "main.js"
   }

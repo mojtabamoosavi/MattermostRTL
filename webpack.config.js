@@ -1,4 +1,4 @@
-var path = require('path');
+const path = require('path');
 
 module.exports = {
     entry: [
@@ -19,10 +19,16 @@ module.exports = {
                 use: {
                     loader: 'babel-loader',
                     options: {
-                        presets: ['env', 'react'],
-                        plugins: [
-                            'transform-class-properties',
-                            'transform-object-rest-spread',
+                        presets: ['@babel/preset-react',
+                            [
+                                "@babel/preset-env",
+                                {
+                                    "modules": "commonjs",
+                                    "targets": {
+                                        "node": "current"
+                                    }
+                                }
+                            ]
                         ],
                     },
                 },
@@ -39,8 +45,6 @@ module.exports = {
     },
     externals: {
         react: 'React',
-        redux: 'Redux',
-        'react-redux': 'ReactRedux',
     },
     output: {
         path: path.join(__dirname, '/dist'),
@@ -48,3 +52,4 @@ module.exports = {
         filename: 'main.js',
     },
 };
+
